@@ -1,0 +1,29 @@
+.wrapper {
+  margin: 30px;
+}
+
+.btn {
+  margin: 12px;
+  display: inline-block;
+  background-color: #07b0a5;
+  box-shadow: 1px 1px 0 0 #04635D;
+  border-radius: 12px;
+  color: #04635D;
+  padding: 15px 10px 15px 10px;
+  border: none;
+}
+
+.setButton {
+  margin: 3px;
+  display: inline-block;
+  font-style: italic;
+  color: #07b0a5;
+  background-color: #04635d;
+  border-radius: 5px;
+  border: 1px solid #04635D;
+  cursor: pointer;
+}
+.setButton:hover {
+  background-color: #07b0a5;
+  color: snow;
+}

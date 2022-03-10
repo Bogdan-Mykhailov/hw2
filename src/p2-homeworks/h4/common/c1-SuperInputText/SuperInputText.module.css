@@ -1,0 +1,36 @@
+.input {
+  background-color: #07b0a5;
+    padding-left: 10px;
+  color: #04635D;
+  font-style: italic;
+  height: 30px;
+  width: 250px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 0 0 #04635D;
+  border: none;
+  font-size: 17px;
+}
+
+.input:focus {
+  outline: none;
+  border: #04635D 1px solid;
+}
+
+.superInput {
+  margin: 10px;
+  background-color: #07b0a5;
+  color: #04635D;
+}
+
+.errorInput {
+  margin: 10px;
+  background-color: #07b0a5;
+  color: #04635D;
+}
+
+.error {
+  height: 20px;
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}

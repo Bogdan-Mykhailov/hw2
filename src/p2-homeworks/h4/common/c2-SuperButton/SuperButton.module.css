@@ -1,0 +1,45 @@
+.supperButton {
+    font-style: italic;
+    color: snow;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+    width: 65px;
+    box-shadow: 1px 1px 0 0 #04635D;
+    position: relative;
+    margin: 5px;
+}
+
+.default {
+    background-color: #07b0a5;
+    cursor: pointer;
+}
+
+.default:hover {
+    background-color: #04635d;
+    cursor: pointer;
+}
+
+.default:disabled {
+    background-color: #94beb9;
+    cursor: auto;
+}
+
+.red {
+    background-color: darkred;
+    font-style: italic;
+    color: snow;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+    width: 65px;
+    box-shadow: 1px 1px 0 0 #04635D;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.red:hover {
+    background: red;
+    color: snow;
+}

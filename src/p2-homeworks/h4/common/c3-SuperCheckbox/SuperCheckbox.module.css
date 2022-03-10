@@ -1,0 +1,25 @@
+.text {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-style: italic;
+  color: #04635D;
+}
+
+.checkbox {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  background-color: #07b0a5;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: #04635d;
+  border: #07b0a5 2px solid;
+}
+
+.spanClassName {
+
+}
