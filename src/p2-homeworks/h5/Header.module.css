@@ -13,13 +13,13 @@
 
 .navigationBar {
   display: flex;
-  transform: translateX(0%);
+  transform: translate(0);
   transition: 0.5s;
 }
 
 .navigationBarActive {
   display: flex;
-  transform: translateX(-15%);
+  transform: translate(-310px);
   transition: 0.5s;
 }
 
