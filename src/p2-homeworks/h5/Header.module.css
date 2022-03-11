@@ -26,27 +26,31 @@
 .btn {
   display: inline-block;
   align-items: center;
-  background-color: #04635d;
+  background-color: #07b0a5;
   border: 1px solid #04635D;
   border-radius: 5px;
-  color: #07b0a5;
+  color: white;
   cursor: pointer;
   height: 25px;
 }
 
-.btn:hover {
-  background-color: #07b0a5;
-  color: snow;
+a {
+  color: #04635D;
 }
 
-a {
-  color: #07b0a5;
+.btn:hover a {
+  color: white;
   text-decoration: none;
   font-style: italic;
 }
 
-.btn:hover a {
-  color: #fff;
+.activeBtn {
+  text-decoration: none;
+  font-style: italic;
+  color: white;
+}
+
+.notActiveBtn {
   text-decoration: none;
   font-style: italic;
 }

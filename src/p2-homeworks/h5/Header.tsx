@@ -15,9 +15,9 @@ function Header() {
     <div>
       <div className={activeBar ? classes.navigationBar : classes.navigationBarActive}>
         <div className={classes.navigationWrapper}>
-          <button className={classes.btn}><NavLink to={PATH.PRE_JUNIOR}>Pre_Junior</NavLink></button>
-          <button className={classes.btn}><NavLink to={PATH.JUNIOR}>Junior</NavLink></button>
-          <button className={classes.btn}><NavLink to={PATH.JUNIOR_PLUS}>Junior_Plus</NavLink></button>
+          <button className={classes.btn}><NavLink to={PATH.PRE_JUNIOR} className={navData => navData.isActive ? classes.activeBtn : classes.notActiveBtn}>Pre_Junior</NavLink></button>
+          <button className={classes.btn}><NavLink to={PATH.JUNIOR} className={navData => navData.isActive ? classes.activeBtn : classes.notActiveBtn}>Junior</NavLink></button>
+          <button className={classes.btn}><NavLink to={PATH.JUNIOR_PLUS} className={navData => navData.isActive ? classes.activeBtn : classes.notActiveBtn}>Junior_Plus</NavLink></button>
         </div>
         <div className={classes.arrow} onClick={onClickArrowHandler}>▶︎</div>
       </div>
