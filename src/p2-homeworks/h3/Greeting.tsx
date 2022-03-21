@@ -12,8 +12,14 @@ type GreetingPropsType = {
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
-  {name, setNameCallback, addUser, error, totalUsers, onKeyPressInputHandler}
-) => {
+  {
+    name,
+    setNameCallback,
+    addUser,
+    error,
+    totalUsers,
+    onKeyPressInputHandler
+  }) => {
 
   const inputClass = error ? s.errorInput : s.input
 

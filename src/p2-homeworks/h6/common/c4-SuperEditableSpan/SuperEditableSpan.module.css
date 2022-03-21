@@ -1,0 +1,19 @@
+.supperSpanWrapper {
+  margin: 10px 0 0 50px;
+  height: 90px;
+}
+
+.superSpan {
+  font-size: 25px;
+  cursor: pointer;
+  color: #04635D;
+  font-style: italic;
+}
+
+.superSpan:hover {
+  color: #07b0a5;
+}
+
+.btn {
+  margin-left: 100px;
+}
