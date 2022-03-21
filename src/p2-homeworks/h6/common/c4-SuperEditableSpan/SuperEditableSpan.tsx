@@ -15,6 +15,7 @@ type SuperEditableSpanType = DefaultInputPropsType & { // и + ещё пропс
   error?: string
   spanClassName?: string
 
+
   spanProps?: DefaultSpanPropsType // пропсы для спана
 }
 
@@ -32,8 +33,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
   const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {}
 
   const onEnterCallback = () => {
-    setEditMode(false)
-    // выключить editMode при нажатии Enter
+    setEditMode(false) // выключить editMode при нажатии Enter
 
     onEnter && onEnter()
   }
