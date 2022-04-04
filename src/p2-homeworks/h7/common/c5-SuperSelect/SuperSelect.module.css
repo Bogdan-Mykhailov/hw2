@@ -1,0 +1,21 @@
+.select {
+  height: 30px;
+  width: 100px;
+  background-color: #07b0a5;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  font-family: "Museo Sans Cyrl";
+  font-weight: 600;
+  font-style: italic;
+  color: #04635d;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+
+.select:hover {
+  color: white;
+  background-color: #07b0a5;
+  border: 1px solid #04635d;
+}
