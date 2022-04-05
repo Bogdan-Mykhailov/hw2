@@ -2,8 +2,8 @@ import React from 'react'
 import Message from "./Message";
 
 const messageData = {
-  avatar: 'https://cdn.pixabay.com/photo/2016/11/21/16/01/woman-1846127_1280.jpg',
-  name: 'Jessica Brown',
+  avatar: 'https://i.pinimg.com/originals/80/d8/e0/80d8e0232d36605e4fb8697353d4a4f2.gif',
+  name: 'Pikachu',
   message: 'Call me back! 🤪',
   time: '12:17',
 }
