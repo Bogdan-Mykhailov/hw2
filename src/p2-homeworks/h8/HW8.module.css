@@ -1,0 +1,28 @@
+.divWrapper {
+  margin: 5px 25px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.nameTitle {
+  font-family: "Museo Sans Cyrl";
+  font-size: 26px;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 20px;
+  color: #04635d;
+}
+
+.years {
+  font-family: "Museo Sans Cyrl";
+  font-weight: 300;
+  font-style: italic;
+  color: #04635d;
+  padding: 5px;
+}
+
+.btns {
+  margin: 5px 15px;
+}
