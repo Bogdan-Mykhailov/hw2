@@ -1,0 +1,32 @@
+.wrapper {
+  border: 1px solid #04635d;
+  border-radius: 5px;
+  height: 100px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.interface {
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeInterface {
+  font-family: 'Museo Sans Cyrl';
+  font-weight: 300;
+  color: #04635d;
+  font-size: 20px;
+}
+
+.dateInterface {
+  font-style: italic;
+  font-family: 'Museo Sans Cyrl';
+  font-weight: 500;
+  color: #04635d;
+}
