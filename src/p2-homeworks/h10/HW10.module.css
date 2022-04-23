@@ -1,0 +1,16 @@
+.wrapper {
+  height: 120px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.preloaderWrapper {
+
+}
+
+.preloaderBtn {
+  margin-top: 80px;
+}
