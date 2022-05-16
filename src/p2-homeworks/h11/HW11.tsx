@@ -1,39 +1,49 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
-import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
+import s from './HW11.module.css'
+import {DoubleRangeSlider} from "./common/c8-SuperDoubleRange/SuperDoubleRangeMaterial";
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+  const [value1, setValue1] = useState(0)
+  const [values, setValues] = React.useState<number[]>([value1, 100]);
 
-    return (
-        <div>
-            <hr/>
-            homeworks 11
+  useEffect(() => {
+    setValues([value1, values[1]])
+  },[value1])
 
-            {/*should work (должно работать)*/}
-            <div>
-                <span>{value1}</span>
-                <SuperRange
-                    // сделать так чтоб value1 изменялось
-                />
-            </div>
+  useEffect(() => {
+    setValue1(value1)
+  },[values[0]])
 
-            <div>
-                <span>{value1}</span>
-                <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
-                />
-                <span>{value2}</span>
-            </div>
+  return (
+    <div>
+      <hr/>
+      homeworks 11
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperRange/>*/}
-            {/*<AlternativeSuperDoubleRange/>*/}
-            <hr/>
-        </div>
-    )
+      {/*should work (должно работать)*/}
+      <div className={s.wrapper}>
+        <span>{value1}</span>
+        <SuperRange onChangeRange={setValue1}/>
+      </div>
+
+      <div className={s.wrapper}>
+        <span>{value1}</span>
+        <DoubleRangeSlider
+          value1={value1}
+          values={values}
+          setValues={setValues}
+          setValue1={setValue1}
+        />
+        <span>{values[1]}</span>
+      </div>
+
+      <hr/>
+      {/*для личного творчества, могу проверить*/}
+      {/*<AlternativeSuperRange/>*/}
+      {/*<AlternativeSuperDoubleRange/>*/}
+      <hr/>
+    </div>
+  )
 }
 
 export default HW11
