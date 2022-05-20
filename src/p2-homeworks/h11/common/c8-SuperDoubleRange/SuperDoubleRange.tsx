@@ -1,67 +1,42 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
+import React from 'react'
+import SuperRange from '../c7-SuperRange/SuperRange';
 import s from './SupperDoubleRange.module.css'
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
 
-type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-type SuperDoubleRangePropsType = DefaultInputPropsType & {
-  // onChangeRange2?: (value2: [number, number]) => void
-  // value2?: [number, number]
-  value1: number
-  values: number[]
-  setValues: (values: number[]) => void
-  min?: string | number | undefined,
-  max?: string | number | undefined,
-  // step?: string | number | undefined,
-  disable?: boolean,
+type SuperDoubleRangePropsType = {
+  onChangeRange?: (value: [number, number]) => void
+  value: [number, number]
+  min: number
+  max: number
+  setValue1: (n: number) => void
+  setValue2: (n: number) => void
 }
 
-const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
+export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
   {
-    setValues,
-    value,
-    type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
-    onChange,
-    className,
-    min, max, step,
-
-    ...restProps// все остальные пропсы попадут в объект restProps
+    onChangeRange, value,
+    min, max,
+    ...props
   }
 ) => {
 
-  const onChangeCallback = (e: ChangeEvent<HTMLInputElement>, newValue: number | number[]) => {
-    onChange && onChange(e)
-    const values = newValue as number[]
-    setValues && setValues(values);
-     // сохраняем старую функциональность
-
+  const f1 = (n: number) => {
+    if (value[1] <= n) return
+    props.setValue1(n)
+  }
+  const f2 = (n: number) => {
+    if (value[0] >= n) return
+    props.setValue2(n)
   }
 
-  // сделать самому, можно подключать библиотеки
-
-
   return (
-    <div>
-
-      <input
-        type={'range'}
-
-        // disabled={disable}
-        {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+    <div className={s.double}>
+      <SuperRange value={value[0]} min={min} max={max}
+                  onChangeRange={f1}
+                  styleClassNameRange={s.rangePosition}
       />
-      <input
-        type={'range'}
-        onChange={(e)=>onChangeCallback}
-
-
-        value={value}
-        // disabled={disable}
-        {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+      <SuperRange value={value[1]} min={min} max={max}
+                  onChangeRange={f2}
       />
-
-      {/*DoubleRange*/}
     </div>
   )
 }
-
-export default SuperDoubleRange
